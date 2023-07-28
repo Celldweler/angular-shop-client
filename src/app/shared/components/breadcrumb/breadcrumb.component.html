@@ -1,0 +1,23 @@
+<!--<div class="breadcrumb">
+  <ul class="breadcrumb-list">
+    <li>
+      <a href="">Home</a>
+      <span class="delimiter">/</span>
+    </li>
+    <li>
+      <strong class="current-item">Computers</strong>
+    </li>
+  </ul>
+</div>-->
+
+<div class="breadcrumb">
+  <ul class="breadcrumb-list">
+    <li *ngFor="let link of items">
+      <a [routerLink]="link.route">{{link.title}}</a>
+      <span class="delimiter">/</span>
+    </li>
+    <!--<li>
+      <strong class="current-item">Computers</strong>
+    </li>-->
+  </ul>
+</div>

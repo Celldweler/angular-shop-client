@@ -1,0 +1,136 @@
+<header class="header">
+
+  <div class="header__container">
+
+    <div class="header-upper">
+      <div class="currency-selector">
+        <select>
+          <option>US Dollar</option>
+          <option>Euro</option>
+        </select>
+      </div>
+
+      <div class="header-links-wrapper">
+        <div class="header-links">
+          <ul>
+            <li><a href=""> Register </a></li>
+            <li><a href=""> Login </a></li>
+            <li>
+              <a href="">
+                <span class="wishlist-label">Wishlist</span>
+                <span class="wishlist-count">(0)</span>
+              </a>
+            </li>
+            <li id="cart-link">
+              <a routerLink="/cart">
+                <span class="shopping-cart-label">Shopping cart</span>
+                <span class="shopping-cart-count">({{ _shoppingCartService.count }})</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-lower">
+
+      <div class="logo">
+        <a routerLink="/">
+          <img src="./assets/nopCommerce__logo.png" width="250" height="50" alt="">
+        </a>
+      </div>
+
+      <div class="search__wrapper">
+        <input class="search__input" type="text" placeholder="Search store">
+        <button class="search__btn" type="button"> Search</button>
+      </div>
+    </div>
+
+    <div class="header-menu">
+      <!--   show loader if during categories loaded -->
+      <ul class="menu__list loading" *ngIf="!loadingCategories && categories.length === 0">
+        <li class="list-item__loader" *ngFor="let loaderCard of [1,2,3,4,5,6,7]">
+        </li>
+      </ul>
+
+      <ul class="menu__list" *ngIf="loadingCategories && categories.length > 0">
+
+        <li class="list__item" *ngFor="let category of categories">
+          <a *ngIf="category.subCategories.length > 0"
+             [routerLink]="['/categories', category.name.toLowerCase().replace(' ', '-')]" >
+            {{category.name}}
+          </a>
+          <a *ngIf="category.subCategories.length === 0"
+              [routerLink]="['/products', category.name.toLowerCase().replace(' ', '-')]">
+            {{category.name}}
+          </a>
+
+          <ul class="sublist dropdown-content" *ngIf="category.subCategories.length > 0">
+            <li *ngFor="let sub of category.subCategories">
+              <a [routerLink]="['/products', sub.toLowerCase().replace(' ', '-')]">{{sub}}</a>
+            </li>
+          </ul>
+        </li>
+
+       <!-- <li class="list__item">
+          <a routerLink="/categories" >
+            Computers
+          </a>
+          <ul class="sublist dropdown-content">
+            <li>
+              <a href="">Desktops</a>
+            </li>
+            <li>
+              <a href="">Notebooks</a>
+            </li>
+            <li>
+              <a href="">Software</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list__item">
+          <a href="">Electronics </a>
+
+          <ul class="sublist dropdown-content">
+            <li>
+              <a href="">Camera & photo</a>
+            </li>
+            <li>
+              <a href="">Cell phones </a>
+            </li>
+            <li>
+              <a href="">Others </a>
+            </li>
+          </ul>
+        </li>
+        <li class="list__item">
+          <a href=""> Apparel </a>
+          <ul class="sublist dropdown-content">
+            <li>
+              <a href="">Shoes </a>
+            </li>
+            <li>
+              <a href="">Clothing </a>
+            </li>
+            <li>
+              <a href="">Accessories  </a>
+            </li>
+          </ul>
+        </li>
+        <li class="list__item">
+          <a href=""> Digital Downloads </a>
+        </li>
+        <li class="list__item">
+          <a href=""> Books </a>
+        </li>
+        <li class="list__item">
+          <a href=""> Jewelry  </a>
+        </li>
+        <li class="list__item">
+          <a href=""> Gift Cards </a>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+
+</header>

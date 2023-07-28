@@ -1,0 +1,99 @@
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.category-card-item {
+  width: 32%;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+
+  .title {
+    padding: 0 0 15px;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    color: #444;
+  }
+
+  .picture {
+    display: block;
+    overflow: hidden;
+    /* Скрываем всё за контуром */
+
+    height: 280px;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+
+    transition: 0.5s; /* Время эффекта */
+    display: block;
+
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.2); /* Увеличиваем масштаб */
+    }
+  }
+}
+
+.category-card__wrapper {
+  display: flex;
+  width: 100%;
+}
+
+// loader styles
+
+.loader-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+$loading-grey: #ededed;
+:root {
+  --loading-grey: #ededed;
+}
+
+.loading .picture,
+.loading h2, {
+  background-color: $loading-grey;
+  background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, .5) 50%,
+      rgba(255, 255, 255, 0) 60%
+  ) $loading-grey;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+.loading h2 {
+  min-height: 1.6rem;
+  border-radius: 4px;
+  animation-delay: .05s;
+}
+
+.loading .description {
+  min-height: 4rem;
+  border-radius: 4px;
+  animation-delay: .06s;
+}
+
+.title-loader {
+  margin-bottom: 10px;
+}

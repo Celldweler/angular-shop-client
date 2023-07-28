@@ -1,0 +1,118 @@
+
+.products-list {
+  margin-bottom: 75px;
+  display: flex;
+  gap: 10px;
+  //justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product_card {
+  width: 24%;
+  margin: 0 0 25px;
+}
+
+.product-title {
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  margin-bottom: 20px;
+}
+.product-title__link {
+  color: #4ab2f1;
+
+  &:hover {
+    color: #248ece;
+  }
+}
+
+.product-img__wrapper {
+  display: inline-block;
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.product-picture {
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.5s; /* Время эффекта */
+  display: block;
+  margin-bottom: 10px;
+  &:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+  }
+}
+
+.details {
+  padding: 0 10px;
+}
+
+.price__wrapper {
+  min-height: 40px;
+  margin: 0 0 10px;
+}
+.price {
+  margin: 0 5px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  gap: 2px;
+  .add-to-cart__btn {
+    width: 60%;
+    background-color: #4ab2f1;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    height: 40px;
+    border: none;
+    display: inline-block;
+
+    &:hover {
+      background-color: #248ece;
+    }
+  }
+
+  .add-to-compare__btn {
+    display: inline-block;
+    height: 40px;
+    border: none;
+    width: 20%;
+    cursor: pointer;
+
+    background-image: url('/assets/icons/compare-button.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .add-to-wishlist__btn {
+    display: inline-block;
+    width: 20%;
+    cursor: pointer;
+
+    height: 40px;
+    border: none;
+
+    border-left: 1px solid #fff!important;
+    background-color: #eaeaea;
+    font-size: 0;
+
+    background-image: url('/assets/icons/wishlist-button.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}

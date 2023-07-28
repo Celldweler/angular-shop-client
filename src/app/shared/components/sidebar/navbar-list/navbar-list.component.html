@@ -1,0 +1,37 @@
+<div class="navbar-list" *ngIf="!hideTestNav">
+  <div class="title">
+    <strong> {{ getCurrentModel().title }} </strong>
+  </div>
+
+  <div class="listbox">
+    <ul class="list">
+      <li class="" *ngFor="let item of navBarItemsVm">
+        <a href=""> {{ item.name }} </a>
+      </li>
+    </ul>
+
+    <div *ngIf="type === NAV_TYPES.MANUFACTURER" class="view-all">
+      <a href="">View all</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="navbar-list" *ngIf="hideTestNav">
+  <div class="title">
+    <strong> {{ title }} </strong>
+  </div>
+
+  <div class="listbox">
+    <ul class="list">
+      <li class="" *ngFor="let item of items">
+        <a [routerLink]="routeFactory(item)"> {{ item }} </a>
+      </li>
+    </ul>
+
+    <div *ngIf="type === NAV_TYPES.MANUFACTURER" class="view-all">
+      <a href="">View all</a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,95 @@
+
+.admin-layout-wrapper {
+  min-height: 100%;
+
+  box-sizing: border-box;
+  font-family: source sans pro,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* The sidebar menu */
+.sidenav {
+  box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 270px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #343a40;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+
+  .admin-panel__logo {
+    border-bottom: 1px solid #4b545c;
+    padding: 0 ;
+  }
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #c2c7d0;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.main-header {
+  margin-left: 270px;
+  background-color: #343a40;
+  height: 40px;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+
+  margin-left: 270px;
+  min-height: 270px;
+
+  background-color: #ecf0f5;
+}
+
+.admin-header {
+
+  background-color: #343a40;
+  height: 50px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style page content */
+.admin-layout__content {
+}
+
+.main-footer {
+  height: 60px;
+  background-color: #fff;
+  margin-left: 270px;
+
+}
+
+
+.sidebar-link {
+}

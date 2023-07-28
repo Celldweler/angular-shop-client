@@ -1,0 +1,37 @@
+
+<app-main-page-wrapper [pageTitle]="currentSubCategory.name" [contentType]=NAV_TYPES.PRODUCT>
+  <div page-body>
+    <div class="product-selectors">
+
+      <div class="wrapper-2">
+        <div class="product-sorting">
+          <span>Sort by</span>
+          <select class="product-sorting__select">
+            <option>Position</option>
+            <option>Name: A to Z</option>
+            <option>Name: Z to A</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Created On</option>
+          </select>
+        </div>
+
+        <div class="product-page-size">
+          <span>Display</span>
+          <select class="product-page-size__select">
+            <option>6</option>
+            <option>3</option>
+          </select>
+          <span>per page</span>
+        </div>
+      </div>
+
+      <div class="product-viewmode">
+        <a [ngStyle]="{'opacity': selectedGridIcon ? '1' : '.5'}" class="view-mode-icon grid" (click)="toggleGridIcon()"></a>
+        <a [ngStyle]="{'opacity': selectedListIcon ? '1' : '.5'}" class="view-mode-icon list" (click)="toggleListIcon()"></a>
+      </div>
+
+    </div>
+    <app-products-list [products]="products"></app-products-list>
+  </div>
+</app-main-page-wrapper>

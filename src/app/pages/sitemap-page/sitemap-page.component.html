@@ -1,0 +1,30 @@
+<div class="sitemap-page__wrapper">
+  <div class="page-title">
+    <h1>Sitemap</h1>
+  </div>
+
+  <div class="page-body">
+    <div class="description">
+      View the sitemap for this website below, with links to each of the pages and brief descriptions of what to find in each section
+    </div>
+
+    <div class="entity" *ngFor="let entity of siteMapItems">
+      <div class="entity-title">
+        <h2> {{entity.title}} </h2>
+      </div>
+
+      <div class="entity-body">
+        <ul>
+          <!--<li *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14]">
+            <a href="">Test Item {{i}}</a>
+          </li>-->
+          <li *ngFor="let i of entity.items">
+            <a [routerLink]="routeFactory(i, entity.title)">{{i.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+

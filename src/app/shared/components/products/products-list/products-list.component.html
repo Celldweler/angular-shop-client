@@ -1,0 +1,56 @@
+<div class="products-list">
+
+  <!--<div class="product_card" *ngFor="let product of [1, 2, 3, 4, ]">
+    <div class="product-img__wrapper">
+      <a class="product-card__link" href="">
+        <img class="product-picture" src="assets/images/products/apple-macbook-pro-13-inch_415.jpeg" alt="">
+      </a>
+    </div>
+
+    <div class="details">
+      <h2 class="product-title">
+        <a class="product-title__link" href="">Apple MacBook Pro 13-inch</a>
+      </h2>
+
+      <app-product-rating-box></app-product-rating-box>
+
+      <div class="price__wrapper">
+        <span class="price">$1,200.00</span>
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart__btn">add to cart</button>
+        <button class="add-to-compare__btn"></button>
+        <button class="add-to-wishlist__btn"></button>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="product_card" *ngFor="let product of products">
+    <div class="product-img__wrapper">
+      <a class="product-card__link" [routerLink]="['/productDetails', product.id]">
+        <!--<img class="product-picture" src="assets/images/products/apple-macbook-pro-13-inch_415.jpeg" alt="">-->
+        <img class="product-picture" [src]="createRoute(product)" alt="">
+      </a>
+    </div>
+
+    <div class="details">
+      <h2 class="product-title">
+        <a class="product-title__link" href="">{{product.name}}</a>
+      </h2>
+
+      <app-product-rating-box></app-product-rating-box>
+
+      <div class="price__wrapper">
+        <span class="price">$1,200.00</span>
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart__btn" (click)="_shoppingCartService.addToCartHandler(product, 1)">add to cart</button>
+        <button class="add-to-compare__btn"></button>
+        <button class="add-to-wishlist__btn"></button>
+      </div>
+    </div>
+  </div>
+
+</div>

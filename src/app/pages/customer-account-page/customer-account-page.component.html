@@ -1,0 +1,15 @@
+
+<app-main-page-wrapper [pageTitle]="customerPageTitle" [showBreadCrumb]="false" [showMainSidebarNavs]="false">
+  <app-navbar-list sidebar__navs
+                   [type]=NAV_TYPES.ACCOUNT
+                   [title]="testCustomerNavTitle"
+                   [hideTestNav]="true"
+                   [items]="testCustomerNavItems"
+  >
+  </app-navbar-list>
+
+  <div page-body>
+    <router-outlet></router-outlet>
+  </div>
+
+</app-main-page-wrapper>

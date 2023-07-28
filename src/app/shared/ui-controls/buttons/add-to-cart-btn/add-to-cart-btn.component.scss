@@ -1,0 +1,18 @@
+
+.add-to-cart__btn {
+  width: 150px;
+  background-color: #4ab2f1;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  height: 40px;
+  border: none;
+  display: inline-block;
+
+  &:hover {
+    background-color: #248ece;
+  }
+}

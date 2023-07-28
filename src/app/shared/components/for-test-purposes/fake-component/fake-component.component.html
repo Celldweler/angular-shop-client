@@ -1,0 +1,21 @@
+
+<div>
+  <h2>first</h2>
+  <ng-content select="[first]"></ng-content>
+</div>
+
+
+<div>
+  <h2>second</h2>
+  <ng-content select="[second]"></ng-content>
+</div>
+
+<div>
+  <p>Conditionally </p>
+
+  <div *ngIf="show">
+    <ng-container >
+      inside container
+    </ng-container>
+  </div>
+</div>

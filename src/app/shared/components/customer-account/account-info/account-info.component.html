@@ -1,0 +1,58 @@
+
+<div class="account-info__wrapper">
+
+  <div class="field-set">
+    <div class="account-info__form">
+      <div class="account-info__title">
+        <strong>Your Personal Details</strong>
+      </div>
+
+      <div class="form-fields">
+
+        <div class="inputs">
+          <label class="input-label">Gender:</label>
+
+          <div class="gender-checkboxes">
+            <span class="male">
+              <input type="radio" checked name="Gender" id="gender-male">
+              <label class="forcheckbox" for="gender-male">Male</label>
+            </span>
+
+            <span class="female">
+              <input type="radio" name="Gender" id="gender-female">
+              <label class="forcheckbox" for="gender-female">Female</label>
+            </span>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <label class="input-label" for="FirstName">First name:</label>
+          <input class="input" type="text" id="FirstName" name="FirstName" value="Steve">
+        </div>
+
+        <div class="inputs">
+          <label class="input-label" for="LastName">Last name:</label>
+          <input class="input" type="text" id="LastName" name="LastName" value="">
+        </div>
+
+        <div class="inputs">
+          <label class="input-label" for="LastName">Date of birth:</label>
+          <div class="date-picker">
+            <app-form-select [options]="days"> </app-form-select>
+
+            <app-form-select [options]="months"></app-form-select>
+
+            <app-form-select [options]="months"></app-form-select>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <label class="input-label" for="Email">Email:</label>
+          <input class="input" type="text" id="Email" name="Email" value="test@email.com">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,69 @@
+<div class="page home-page">
+  <div class="page-body">
+    <div class="banner__wrapper">
+      <img src="../../../assets/banner_01.webp" alt="">
+      <!--<img src="../../../assets/banner_02.webp" alt="">-->
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-block-title">
+        <h2>Welcome to our store</h2>
+      </div>
+
+      <div class="topic-block-body">
+        <p>
+          Online shopping is the process consumers go through to purchase products or
+          services over the Internet. You can edit this in the admin site.
+        </p>
+        <p>
+          If you have questions, see the <a href="http://docs.nopcommerce.com/">Documentation</a>, or post in the
+          <a href="https://www.nopcommerce.com/boards/">Forums</a> at
+          <a href="https://www.nopcommerce.com">nopCommerce.com</a>
+        </p>
+      </div>
+
+    </div>
+
+    <app-categories-list></app-categories-list>
+
+    <div class="featured-products">
+      <div class="title">
+        <strong>Featured products</strong>
+      </div>
+
+      <app-products-list [products]="_featuredProducts"></app-products-list>
+    </div>
+
+    <div class="news-list">
+      <div class="title">
+        <strong>News</strong>
+      </div>
+
+      <div class="news-items">
+        <div class="news-item" *ngFor="let post of [1,2,3]">
+          <div class="news-head">
+            <a href="" class="news-title">New online store is open!</a>
+            <span class="news-date">-Thursday, July 26, 2018</span>
+          </div>
+          <div class="news-body">
+            The new nopCommerce store is open now! We are very excited to offer our new range of products. We will be constantly adding to our range so please register on our site.
+          </div>
+
+          <div class="news-buttons">
+            <a href="" class="read-more">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all">
+        <a class="view-all__link" href="">View News Archive</a>
+      </div>
+    </div>
+
+    <div class="polls">
+      <h2>Community poll</h2>
+    </div>
+
+  </div>
+</div>
+

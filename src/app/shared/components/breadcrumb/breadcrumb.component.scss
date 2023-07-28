@@ -1,0 +1,34 @@
+.breadcrumb {
+  margin: 0 0 20px;
+  padding: 5px 10px;
+  background-color: #f6f6f6;
+
+  li * {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+
+      .delimiter {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: #4ab2f1;
+    }
+  }
+
+  strong {
+    font-weight: 400;
+  }
+}

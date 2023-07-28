@@ -1,0 +1,16 @@
+
+.product-rating-box {
+  margin: 0 0 15px;
+
+  .rating {
+    width: 95px;
+    height: 14px;
+
+    background: url("/assets/icons/rating-grey.png") repeat-x;
+
+    div {
+      background: url("/assets/icons/rating-orange.png") repeat-x;
+      height: 14px;
+    }
+  }
+}

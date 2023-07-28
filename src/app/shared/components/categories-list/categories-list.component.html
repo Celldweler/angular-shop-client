@@ -1,0 +1,35 @@
+<div class="categories-list">
+
+ <!-- <div class="category-card-item" *ngFor="let category of categories">
+    <h2 class="title">{{category.title}}</h2>
+    <div class="picture">
+      <a href="">
+        &lt;!&ndash;<img class="category-card-item__img" src="assets/images/categories/electronics_category.jpeg" alt="">&ndash;&gt;
+        <img class="category-card-item__img" [src]="categoriesPicturesPath + category.image" alt="">
+      </a>
+    </div>
+  </div>
+  -->
+
+  <div class="category-card__wrapper" *ngIf="loading && categoriesFromApi.length > 0">
+    <div class="category-card-item" *ngFor="let category of categoriesFromApi">
+      <h2 class="title">{{category.name}}</h2>
+      <div class="picture">
+        <a href="">
+          <!--<img class="category-card-item__img" src="assets/images/categories/electronics_category.jpeg" alt="">-->
+          <img class="category-card-item__img" [src]="API_URL+'/api/files/'+category.image?.fileName+'/product'" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader-wrapper" *ngIf="!loading && categoriesFromApi.length === 0">
+    <div class="category-card-item loading" *ngFor="let i of [1,2,3]">
+      <h2 class="title title-loader"></h2>
+      <div class="picture">
+
+      </div>
+    </div>
+  </div>
+
+</div>

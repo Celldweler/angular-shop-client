@@ -1,0 +1,156 @@
+<!--
+<div class="breadcrumb">
+  <ul class="breadcrumb-list">
+    <li>
+      <a href="">Home</a>
+      <span class="delimiter">/</span>
+    </li>
+    <li>
+      <strong class="current-item">Computers</strong>
+    </li>
+  </ul>
+</div>
+
+<div class="category-page__wrapper">
+
+  <div class="sidebar">
+
+    <app-navbar-list [type]=NAV_TYPES.CATEGORY></app-navbar-list>
+
+    <app-navbar-list [type]=NAV_TYPES.MANUFACTURER></app-navbar-list>
+  &lt;!&ndash;  <div class="category-nav">
+      <div class="title">
+        <strong>Categories</strong>
+      </div>
+
+      <div class="listbox">
+        <ul class="list">
+          <li class="active">
+            <a href="">Computers</a>
+          </li>
+
+          <li class="inactive">
+            <a href=""> Electronics </a>
+          </li>
+          <li class="inactive">
+            <a href=""> Apparel </a>
+          </li>
+          <li class="inactive">
+            <a href="">Digital downloads</a>
+          </li>
+          <li class="inactive">
+            <a href="">Books</a>
+          </li>
+          <li class="inactive">
+            <a href="">Jewelry</a>
+          </li>
+          <li class="inactive">
+            <a href="">Gift Cards</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block manufacturer-nav">
+      <div class="title">
+        <strong>Manufacturer</strong>
+      </div>
+
+      <div class="listbox">
+        <ul class="list">
+          <li class="inactive">
+            <a href="">Apple</a>
+          </li>
+          <li class="inactive">
+            <a href="">Sortcompany</a>
+          </li>
+          <li class="inactive">
+            <a href="">Undersoulwear</a>
+          </li>
+        </ul>
+
+        <div class="view-all">
+          <a href="">View all</a>
+        </div>
+      </div>
+    </div>&ndash;&gt;
+
+    <div class="block block-recently-viewed-products">
+      <div class="title">
+        <strong>Recently viewed products</strong>
+      </div>
+
+      <div class="listbox">
+        <ul class="">
+          <li>
+            <a href="" class="">
+              <img width="60" src="assets/images/products/apple-macbook-pro-13-inch_415.jpeg" alt="">
+            </a>
+            <a class="" href="">Apple MacBook Pro 13-inch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block block-popular-tags">
+      <div class="title">
+        <strong>Popular tags</strong>
+      </div>
+
+      <div class="listbox">
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="center">
+    <div class="page-title">
+      <h1>Computers</h1>
+    </div>
+
+    <div class="page-body">
+
+      <div class="sub-categories-list">
+        <div class="sub-category__item" *ngFor="let i of [1,2,3]">
+          <h2 class="sub-category__title">
+            <a href="">Desktops</a>
+          </h2>
+
+          <div class="picture">
+            <a href="">
+              <img style="width: 283px; height: 184px" src="assets/images/categories/sub-categories/0000002_desktops_450.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+-->
+
+<app-main-page-wrapper [pageTitle]="currentParentCategory.name">
+  <div class="sub-categories-list" page-body>
+
+    <div class="sub-category__item" *ngFor="let sub of _subCategories">
+      <h2 class="sub-category__title">
+        <a routerLink="/products">{{sub.name}}</a>
+      </h2>
+
+      <div class="picture" *ngIf="sub.image">
+        <a [routerLink]="['/products', sub.name.toLowerCase()]">
+          <img style="width: 283px; height: 184px" [src]="API_URL+'/api/files/'+sub.image?.fileName+'/'+sub.image?.type" alt="">
+        </a>
+      </div>
+
+      <div class="picture" *ngIf="!sub.image" style="width: 283px; height: 184px;border: 1px solid grey; text-align: center; vertical-align: middle">
+        <p>Image not set</p>
+      </div>
+
+    </div>
+
+  </div>
+</app-main-page-wrapper>

@@ -1,0 +1,18 @@
+<div class="product-filters">
+  <div class="filter-title">
+    <strong>Filter by attributes</strong>
+  </div>
+
+  <div class="filter-content">
+    <ul class="group" *ngFor="let group of groups">
+      <li class="group-name">
+        <strong>{{group.groupName}}</strong>
+      </li>
+
+      <li class="group-item" *ngFor="let item of group.items">
+        <input type="checkbox" name="" id="">
+        <label class="item__name" for="">{{item}}</label>
+      </li>
+    </ul>
+  </div>
+</div>

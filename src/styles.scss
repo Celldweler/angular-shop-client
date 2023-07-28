@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/*
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*/
+
+html,
+body {
+  height: 100%;
+  color: #777;
+  background-color: #fff;
+  font: 15px Arial,Helvetica,sans-serif;
+  //color: #777;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.content-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:hover {
+  color: #4ab2f1;
+}
+
+

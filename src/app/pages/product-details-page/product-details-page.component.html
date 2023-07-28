@@ -1,0 +1,171 @@
+<app-breadcrumb ></app-breadcrumb>
+
+<div class="page product-details__page">
+  <div class="page-body">
+
+    <div class="product-essentials">
+      <div class="product-essentials__upper">
+        <!-- gallery start -->
+        <div class="picture-gallery">
+          <div class="picture">
+            <img [src]="RouterFactoryHelper.fileEndpoint(productDetailsInfo.images[0])" width="550" alt="">
+<!--            <img src="/assets/images/products/apple-macbook-pro-13-inch_415.jpeg" width="550" alt="">-->
+          </div>
+
+          <div class="picture-thumbs">
+            <a href="" class="thumb-item">
+              <img src="/assets/images/products/apple-macbook-pro-13-inch_415.jpeg" width="100" alt="">
+            </a>
+            <a href="" class="thumb-item">
+              <img src="/assets/images/products/apple-macbook-pro-13-inch_415.jpeg" width="100" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- gallery end -->
+        <div class="product-overview">
+          <div class="product-name">
+            <h1> {{ productDetailsInfo.name }} </h1>
+          </div>
+
+          <div class="short-description">
+           <!-- A groundbreaking Retina display. A new force-sensing trackpad. All-flash architecture. Powerful dual-core
+            and quad-core Intel processors. Together, these features take the notebook to a new level of performance.
+            And they will do the same for you in everything you create.-->
+            {{productDetailsInfo.description}}
+          </div>
+
+          <div class="product-reviews-overview">
+            <div class="product-review-box">
+              <app-product-rating-box></app-product-rating-box>
+            </div>
+            <div class="product-review-links">
+              <a href="">2 review(s)</a>
+              <span class="separator">|</span>
+              <a href="">Add your review</a>
+            </div>
+          </div>
+
+          <div class="manufacturers">
+            <span class="label">Manufacturer:</span>
+            <span class="value">
+              <a href="">Apple</a>
+            </span>
+          </div>
+
+          <!-- <div class="additional-details">
+
+           </div>-->
+
+          <div class="delivery">
+            <div class="shipping-info">
+              Free shipping
+            </div>
+          </div>
+
+          <div class="prices">
+            <div class="product-price">
+              <span> $ {{ productDetailsInfo.price | number: '1.2' }} </span>
+            </div>
+          </div>
+
+          <div class="add-to-cart">
+            <div class="add-to-cart-panel">
+              <input [(ngModel)]="qty" class="qty-input" type="number" value="1" name="" id="" min="1">
+              <button class="add-to-cart-button" (click)="_shoppingCartService.addToCartHandler(productDetailsInfo, qty)">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="overview-buttons">
+            <div class="add-to-wishlist">
+              <button class="add-to-wishlist__btn btn">Add to wishlist</button>
+            </div>
+
+            <div class="compare-products">
+              <button class="compare-products__btn btn">Add to compare list</button>
+            </div>
+
+            <div class="send-msg-to-seller">
+              <button class="send-msg-to-seller__btn btn">Email a seller</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="full-description">
+        <p>
+          With fifth-generation Intel Core processors, the latest graphics, and faster
+          flash storage, the incredibly advanced MacBook Pro with Retina display moves even further ahead in performance
+          and battery life.* *Compared with the previous generation.
+        </p>
+        <p>Retina display with 2560-by-1600 resolution</p>
+        <p>Fifth-generation dual-core Intel Core i5 processor</p>
+        <p>Intel Iris Graphics</p>
+        <p>Up to 9 hours of battery life1</p>
+        <p>Faster flash storage2</p>
+        <p>802.11ac Wi-Fi</p>
+        <p>Two Thunderbolt 2 ports for connecting high-performance devices and transferring data at lightning speed</p>
+        <p>Two USB 3 ports (compatible with USB 2 devices) and HDMI</p>
+        <p>FaceTime HD camera</p>
+        <p>Pages, Numbers, Keynote, iPhoto, iMovie, GarageBand included</p>
+        <p>OS X, the world's most advanced desktop operating system</p>
+      </div>
+
+    </div>
+
+    <div class="product-collateral">
+
+      <div class="product-specs-block">
+        <div class="title">
+          <strong>Products specifications</strong>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td class="spec-name">Screensize</td>
+                <td class="spec-value">13.0''</td>
+              </tr>
+              <tr>
+                <td class="spec-name">CPU Type</td>
+                <td class="spec-value">Intel Core i5</td>
+              </tr>
+              <tr>
+                <td class="spec-name">Memory</td>
+                <td class="spec-value">8 GB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="product-tags-block">
+        <div class="title">
+          <strong>Product tags</strong>
+        </div>
+
+        <div class="product-tags-list">
+          <ul>
+            <div class="list-item__wrapper" *ngFor="let i of [1,2,3,]">
+              <li class="tag">
+                <a class="tag-link" href="">item</a>
+                <span class="count-products-in-tag">(10)</span>
+                <span class="separator">,</span>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="related-products">
+      <div class="title">
+        <strong>Related products</strong>
+      </div>
+      <app-products-list></app-products-list>
+    </div>
+
+  </div>
+</div>

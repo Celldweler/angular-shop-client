@@ -1,0 +1,27 @@
+
+.custom-select {
+  min-height: 40px;
+  max-width: 126px;
+  width: 31%;
+  background-color: #fff;
+
+  min-width: 50px;
+  height: 32px;
+  padding: 6px;
+
+  font-size: 15px;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #777;
+
+  border: 1px solid #ddd;
+  vertical-align: middle;
+
+  margin-right: 10px;
+
+  &:focus {
+    border-color: #ccc;
+    color: #444;
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,109 @@
+
+.account-info__wrapper {
+
+}
+
+.field-set {
+  margin: 0 0 40px;
+
+}
+
+.account-info__form {
+
+}
+
+.account-info__title {
+  margin: 0 0 15px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #444;
+
+  strong {
+    font-weight: 400;
+  }
+}
+
+.form-fields {
+  border-top: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputs {
+  color: #444444;
+  /*align-items: center;*/
+  text-align: left;
+
+  position: relative;
+  margin: 0 0 15px;
+  /* text-align: center; */
+  white-space: nowrap;
+  font-size: 0;
+
+  label {
+    text-align: right;
+    font-size: 14px;
+    color: #444;
+  }
+}
+
+.gender-checkboxes {
+  display: inline-block;
+
+  span {
+    margin: 0 10px 0 0;
+    display: inline-block;
+  }
+  span>* {
+   /* margin: 0 5px 0 0; */
+    display: inline!important;
+    margin: 0 5px;
+    line-height: 32px;
+  }
+}
+
+.input-label {
+  width: 214px;
+  display: inline-block;
+  text-align: end;
+  margin: 0 10px 0 0;
+}
+
+.input-label, .input-label+* {
+  vertical-align: middle;
+}
+
+input[type=checkbox], input[type=radio], input[type=checkbox]+*, input[type=radio]+* {
+  vertical-align: middle;
+}
+
+input, textarea, select, button {
+  font-size: 15px;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #777;
+}
+
+.input {
+  width: 400px;
+  max-width: 100%;
+  background-color: #fff;
+
+  height: 30px;
+  border: 1px solid #ddd;
+  padding: 5px 8px;
+  vertical-align: middle;
+
+  &:focus {
+    border-color: #ccc;
+    color: #444;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.date-picker {
+  display: inline-block;
+}
